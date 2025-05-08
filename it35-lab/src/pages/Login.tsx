@@ -88,14 +88,17 @@ import {
               type="email"
               placeholder="Enter Email"
               value={email}
-              onIonChange={e => setEmail(e.detail.value!)}
+              onIonInput={e => setEmail(e.detail.value!)}
+              debounce={0}
             />
-            <IonInput style={{ marginTop:'10px' }}      
+            <IonInput 
+              style={{ marginTop:'10px' }}      
               fill="outline"
               type="password"
               placeholder="Password"
               value={password}
-              onIonChange={e => setPassword(e.detail.value!)}
+              onIonInput={e => setPassword(e.detail.value!)}
+              debounce={0}
             >
               <IonInputPasswordToggle slot="end"></IonInputPasswordToggle>
             </IonInput>

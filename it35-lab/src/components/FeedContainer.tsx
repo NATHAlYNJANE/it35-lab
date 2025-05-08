@@ -124,7 +124,12 @@ const FeedContainer = () => {
                     <IonCardTitle>Create Post</IonCardTitle>
                 </IonCardHeader>
                 <IonCardContent>
-                    <IonInput value={postContent} onIonChange={e => setPostContent(e.detail.value!)} placeholder="Write a post..." />
+                    <IonInput 
+                      value={postContent} 
+                      onIonInput={e => setPostContent(e.detail.value!)} 
+                      placeholder="Write a post..." 
+                      debounce={0}
+                    />
                 </IonCardContent>
                 <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '0.5rem' }}>
                     <IonButton onClick={createPost}>Post</IonButton>
@@ -190,7 +195,12 @@ const FeedContainer = () => {
             </IonToolbar>
           </IonHeader>
           <IonContent>
-            <IonInput value={postContent} onIonChange={e => setPostContent(e.detail.value!)} placeholder="Edit your post..." />
+            <IonInput 
+              value={postContent} 
+              onIonInput={e => setPostContent(e.detail.value!)} 
+              placeholder="Edit your post..." 
+              debounce={0}
+            />
           </IonContent>
           <IonFooter>
             <IonButton onClick={savePost}>Save</IonButton>

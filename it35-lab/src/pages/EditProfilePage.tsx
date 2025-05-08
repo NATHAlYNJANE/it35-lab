@@ -216,7 +216,8 @@ const EditAccount: React.FC = () => {
                   fill="outline"
                   placeholder="Enter username"
                   value={username}
-                  onIonChange={(e) => setUsername(e.detail.value!)}
+                  onIonInput={(e) => setUsername(e.detail.value!)}
+                  debounce={0}
                 />
               </IonCol>
             </IonRow>
@@ -229,7 +230,8 @@ const EditAccount: React.FC = () => {
                   fill="outline"
                   placeholder="Enter First Name"
                   value={firstName}
-                  onIonChange={(e) => setFirstName(e.detail.value!)}
+                  onIonInput={(e) => setFirstName(e.detail.value!)}
+                  debounce={0}
                 />
               </IonCol>
               <IonCol size="6">
@@ -240,7 +242,8 @@ const EditAccount: React.FC = () => {
                   fill="outline"
                   placeholder="Enter Last Name"
                   value={lastName}
-                  onIonChange={(e) => setLastName(e.detail.value!)}
+                  onIonInput={(e) => setLastName(e.detail.value!)}
+                  debounce={0}
                 />
               </IonCol>
             </IonRow>
@@ -258,7 +261,8 @@ const EditAccount: React.FC = () => {
                   fill="outline"
                   placeholder="Enter New Password"
                   value={password}
-                  onIonChange={(e) => setPassword(e.detail.value!)}
+                  onIonInput={(e) => setPassword(e.detail.value!)}
+                  debounce={0}
                 >
                   <IonInputPasswordToggle slot="end" />
                 </IonInput>
@@ -276,7 +280,8 @@ const EditAccount: React.FC = () => {
                   fill="outline"
                   placeholder="Confirm New Password"
                   value={confirmPassword}
-                  onIonChange={(e) => setConfirmPassword(e.detail.value!)}
+                  onIonInput={(e) => setConfirmPassword(e.detail.value!)}
+                  debounce={0}
                 >
                   <IonInputPasswordToggle slot="end" />
                 </IonInput>
@@ -297,9 +302,10 @@ const EditAccount: React.FC = () => {
                   type="password"
                   labelPlacement="floating"
                   fill="outline"
-                  placeholder="Enter Current Password to Save Changess"
+                  placeholder="Enter Current Password to Save Changes"
                   value={currentPassword}
-                  onIonChange={(e) => setCurrentPassword(e.detail.value!)}
+                  onIonInput={(e) => setCurrentPassword(e.detail.value!)}
+                  debounce={0}
                 >
                 <IonInputPasswordToggle slot="end" />
                 </IonInput>
